@@ -16,15 +16,13 @@ public class StarCore extends PluginBase implements Listener {
 
     public void onJoin(PlayerJoinEvent event){
         final Player player = event.getPlayer();
-        inventory = player.getInventory();
-        inventory.clearAll();
-        inventory.setItem(0, Item.get(264, 0, 1).setCustomName("MY ITEM"));
+        player.getInventory().clearAll();
+        player.getInventory().setItem(0, Item.get(264, 0, 1).setCustomName("MY ITEM"));
     }
 
     public void onInteract(PlayerInteractEvent event){
         final Player player = event.getPlayer();
-        itemHand = player.getInventory().getItemInHand();
-        if(itemHand.getCustomName() == "MY ITEM"){
+        if(player.getInventory().getItemInHand().getCustomName() == "MY ITEM"){
             player.sendMessage("You've clicked MY ITEM!");
             return;
         }
