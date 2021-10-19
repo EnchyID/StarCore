@@ -21,7 +21,7 @@ public class StarCore extends PluginBase implements Listener {
         inventory.setItem(0, Item.get(264, 0, 1).setCustomName("MY ITEM"));
     }
 
-    public void onQuit(PlayerQuitEvent event){
+    public void onInteract(PlayerInteractEvent event){
         final Player player = event.getPlayer();
         itemHand = player.getInventory().getItemInHand();
         if(itemHand.getCustomName() == "MY ITEM"){
