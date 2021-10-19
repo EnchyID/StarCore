@@ -1,0 +1,5 @@
+name: StarCore
+main: me.frogas.starcore.StarCore;
+api: 1.0.0
+version: 1.0
+author: FrogasQ
