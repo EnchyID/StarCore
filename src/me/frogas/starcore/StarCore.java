@@ -26,7 +26,7 @@ public class StarCore extends PluginBase implements Listener {
         itemHand = player.getInventory().getItemInHand();
         if(itemHand.getCustomName() == "MY ITEM"){
             player.sendMessage("You've clicked MY ITEM!");
-            return true;
+            return;
         }
     }
 }
